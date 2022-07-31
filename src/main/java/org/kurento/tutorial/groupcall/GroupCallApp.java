@@ -21,6 +21,7 @@ import org.kurento.client.KurentoClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.socket.config.annotation.EnableWebSocket;
 import org.springframework.web.socket.config.annotation.WebSocketConfigurer;
 import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry;
@@ -33,6 +34,7 @@ import org.springframework.web.socket.server.standard.ServletServerContainerFact
  */
 @SpringBootApplication
 @EnableWebSocket
+@CrossOrigin("*")
 public class GroupCallApp implements WebSocketConfigurer {
 
   @Bean
